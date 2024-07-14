@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Icon Header -->
+    <link rel="icon" type="image/x-icon" href="../photos/logo.png">
+    <!-- Sacle Width For Screens -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="../css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/index.css">
+    <title>Yummy</title>
+</head>
+<body class="bg-black">
+    <!-- Aside Panel -->
+    <aside>
+        <!-- Main Aside Panel -->
+        <div class="bg-black position-fixed top-0 start-0 bottom-0 d-flex flex-column pt-5 justify-content-between z-1 aside  mainAside" id="mainAside">
+            <div>
+                <!-- Navigation Links -->
+                <ul class="list-unstyled">
+                    <li class="searchLink"><a id="searchLink" href="./search.html">Search</a></li>
+                    <li class="searchCategories"><a id="searchCategories" href="./categories.html">Categories</a></li>
+                    <li class="searchArea"><a id="searchArea" href="./areas.html">Area</a></li>
+                    <li class="SearchIngredients" ><a id="SearchIngredients" href="./ingredients.html">Ingredients</a></li>
+                    <li class="ContactUs"><a id="ContactUs" href="./contacts.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="bottomSide text-white">
+                <!-- Social Media Icons -->
+                <div class="d-flex justify-content-evenly mb-4">
+                    <i class="fa-brands fa-facebook fa-2xl text-primary"></i>
+                    <i class="fa-brands fa-twitter fa-2xl text-info"></i>
+                    <i class="fa-brands fa-youtube fa-2xl text-danger"></i>
+                </div>
+                <!-- Copyright Notice -->
+                <p class="ms-2 text-center">Copyright ©2024 By Mohamed Gouda All Rights Reserved.</p>
+            </div>
+        </div>
+        <!-- Sub Aside Panel -->
+        <div class="subAside z-1 py-5 px-2 d-flex flex-column justify-content-between align-items-center" id="subAside">
+            <!-- Logo -->
+            <div class="pic text-center">
+                <a href="../index.html"><img src="../photos/logo.png" alt="" width="50"></a>
+            </div>
+            <!-- Close Button -->
+            <div class="closeAside text-center">
+                <button type="button" class="btn-close btn-lg fs-3 text-black opacity-100 " aria-label="Close" id="clodeAside"></button>
+                <!-- Open Button -->
+                <button class="btn btn-toolbar fs-1 text-black border-0" id="openAside"><i class="fa-solid fa-bars"></i></button>
+            </div>
+            <!-- Social Icons -->
+            <div class="socialIcon text-center">
+                <i class="fa-solid fa-share-nodes fa-2xl mb-4"></i>
+                <i class="fa-solid fa-earth-americas fa-2xl mt-3"></i>
+            </div>
+        </div>
+    </aside>
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <!-- Category Content Section -->
+            <div class="row g-4 py-sm-5 py-3" id="cotogeryContent">
+                <!-- Loading Spinner for Category Content -->
+                <div class="layer position-absolute start-0 end-0 top-0 bottom-0 justify-content-center align-items-center mainLoader z-n1">
+                    <span class="loader"></span>
+                </div> 
+            </div>
+            <!-- Sub Content Section (Hidden by Default) -->
+            <div class="row  d-none py-sm-5 py-3 " id="subContent">
+                <!-- Loading Spinner for Sub Content -->
+                <div class="layer position-absolute start-0 end-0 top-0 bottom-0 justify-content-center align-items-center mainLoader z-n1">
+                    <span class="loader"></span>
+                </div> 
+            </div>
+        </div>
+    </main>
+    <!-- JavaScript Libraries -->
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="../js/categories.js"></script>
+</body>
+</html>

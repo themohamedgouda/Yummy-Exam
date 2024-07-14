@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Icon Header -->
+    <link rel="icon" type="image/x-icon" href="../photos/logo.png">
+    <!-- Scale Width For Screens -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="../css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/index.css">
+    <title>Yummy</title>
+</head>
+<body class="bg-black">
+    
+    <!-- Aside Panel -->
+    <aside>
+        <!-- Main Aside Panel -->
+        <div class="bg-black position-fixed top-0 start-0 bottom-0 d-flex flex-column pt-5 justify-content-between z-1 aside  mainAside" id="mainAside">
+            <div>
+                <ul class="list-unstyled">
+                    <!-- Navigation Links -->
+                    <li class="searchLink"><a id="searchLink" href="./search.html">Search</a></li>
+                    <li class="searchCategories"><a id="searchCategories" href="./categories.html">Categories</a></li>
+                    <li class="searchArea"><a id="searchArea" href="./areas.html">Area</a></li>
+                    <li class="SearchIngredients"><a id="SearchIngredients" href="./ingredients.html">Ingredients</a></li>
+                    <li class="ContactUs"><a id="ContactUs" href="./contacts.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <!-- Social Icons and Copyright -->
+            <div class="bottomSide text-white ">
+                <div class="d-flex justify-content-evenly mb-4">
+                    <i class="fa-brands fa-facebook fa-2xl text-primary"></i>
+                    <i class="fa-brands fa-twitter fa-2xl text-info"></i>
+                    <i class="fa-brands fa-youtube fa-2xl text-danger"></i>
+                </div>
+                <p class="ms-2 text-center">Copyright ©2024 By Mohamed Gouda All Rights Reserved.</p>
+            </div>
+        </div>
+        
+        <!-- Sub Aside Panel -->
+        <div class="subAside z-1 py-5 px-2 d-flex flex-column justify-content-between align-items-center" id="subAside">
+            <!-- Logo -->
+            <div class="pic text-center">
+                <a href="../index.html"><img src="../photos/logo.png" alt="" width="50"></a>
+            </div>
+            <!-- Close Button -->
+            <div class="closeAside text-center">
+                <button type="button" class="btn-close btn-lg fs-3 text-black opacity-100 " aria-label="Close" id="clodeAside"></button>
+                <!-- Open Button -->
+                <button class="btn btn-toolbar fs-1 text-black border-0" id="openAside"><i class="fa-solid fa-bars"></i></button>
+            </div>
+            <!-- Social Icons -->
+            <div class="socialIcon text-center">
+                <i class="fa-solid fa-share-nodes fa-2xl mb-4"></i>
+                <i class="fa-solid fa-earth-americas fa-2xl mt-3"></i>
+            </div>
+        </div>
+    </aside>
+    
+    <!-- Main Content -->
+    <main>
+        <div class="container py-5">
+            <div class="formPosition">
+                <!-- Form Header -->
+                <header class="mb-4">
+                    <h1 class="text-center text-white pb-4 fw-bolder">Contact US </h1>
+                </header>
+                <!-- Contact Form -->
+                <form action="" id="myForm">
+                    <div class="row g-4">
+                        <!-- Form Inputs -->
+                        <div class="col-md-6">
+                            <input type="text" class="form-control text-white  " placeholder="Write Your Name" id="inputName">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="email" class="form-control text-white  " placeholder="Write Your Email" id="inputEmail">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="tel" class="form-control text-white  " placeholder="Write Your Phone" id="inputPhone">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="tel" class="form-control text-white  " placeholder="Write Your Age" id="inputAge">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="password" class="form-control text-white  " placeholder="Write Your Password" id="inputPassword">
+                        </div>
+                        <div class="col-md-6 mb-1">
+                            <input type="password" class="form-control text-white  " placeholder="Rewrite Your Password" id="inputRepassword">
+                        </div>
+                        <!-- Validation Alerts -->
+                        <div class="col-md-12 mb-0">
+                            <div id="alertName" class="alertName alert alert-danger py-1 text-center " role="alert">Please enter a valid name (at least 2 alphabetical characters or spaces).</div>
+                            <div id="alertEmail" class="alertEmail alert alert-danger py-1 text-center " role="alert">Invalid Email - Please enter a valid email address!</div>
+                            <div id="alertPhone" class="alertPhone alert alert-danger py-1 text-center " role="alert">Please enter a valid phone number</div>
+                            <div id="alertAge" class="alertAge alert alert-danger py-1 text-center " role="alert">Invalid Age - Please enter a valid age!</div>
+                            <div id="alertPassword" class="alertPassword alert alert-danger py-1 text-center " role="alert">Please enter a strong password (8+ characters, with letters, digits, and special characters).</div>
+                            <div id="alertRepassword" class="alertRepassword alert alert-danger py-1 text-center " role="alert">Passwords Do Not Match - Please check your inputs!</div>
+                            <div id="alertSuccess" class="alertSuccess alert alert-success py-1 text-center  " role="alert">Your information has been sent. We will respond to you soon.</div>
+                        </div>
+                        <!-- Submit Button -->
+                        <div class="text-center m-0">
+                           <button type="submit" class="btn btn-outline-info w-25 fs-5" disabled id="formBtn">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    
+    <!-- JavaScript Libraries -->
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="../js/contacts.js"></script>
+</body>
+</html>

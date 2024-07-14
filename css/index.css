@@ -1,0 +1,230 @@
+/* General Components */
+
+/* Loader */
+.mainLoader{
+  display: none; /* Hide loader by default */
+}
+.layer{
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent layer */
+}
+.loader {
+  transform: rotateZ(45deg); /* Initial loader rotation */
+  perspective: 1000px;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  color: #fff;
+}
+
+.loader:before,
+.loader:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  transform: rotateX(70deg);
+  animation: 1s spin linear infinite;
+}
+
+.loader:after {
+  color: #FF3D00; /* Loader color variation */
+  transform: rotateY(70deg);
+  animation-delay: .4s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotateZ(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotateZ(360deg);
+  }
+}
+
+@keyframes rotateccw {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+@keyframes spin {
+  0%, 100% {
+    box-shadow: .2em 0px 0 0px currentcolor;
+  }
+  12% {
+    box-shadow: .2em .2em 0 0 currentcolor;
+  }
+  25% {
+    box-shadow: 0 .2em 0 0px currentcolor;
+  }
+  37% {
+    box-shadow: -.2em .2em 0 0 currentcolor;
+  }
+  50% {
+    box-shadow: -.2em 0 0 0 currentcolor;
+  }
+  62% {
+    box-shadow: -.2em -.2em 0 0 currentcolor;
+  }
+  75% {
+    box-shadow: 0px -.2em 0 0 currentcolor;
+  }
+  87% {
+    box-shadow: .2em -.2em 0 0 currentcolor;
+  }
+}
+
+/* Overlayer of photo */
+
+.overlayer{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform: translateY(120%); /* Initially off-screen */
+  background-color: rgb(255, 255, 255, 0.5); /* Semi-transparent white */
+  transition: 0.7s all ease;
+  display: flex;
+}
+
+/* Hover effect for items */
+.gllary, .gallaryItem, .categoryItem, .areaItem, .ingredientItem {
+  cursor: pointer;
+}
+
+.gallaryItem:hover .overlayer,
+.gllary:hover .overlayer,
+.categoryItem:hover .overlayer,
+.areaItem:hover .overlayer,
+.ingredientItem:hover .overlayer {
+  transform: translateY(0px); /* Slide in on hover */
+}
+
+/* SearchPage */
+
+::placeholder {
+  color: rgba(255, 255, 255, 0.5) !important; /* Placeholder text color */
+}
+
+/* areaPage */
+.areaItem {
+  cursor: pointer;
+}
+
+.areaItem i {
+  transition: 0.3s all ease-in; /* Icon transition */
+}
+
+.areaItem:hover i {
+  color: rgba(255, 0, 0, 0.7) !important; /* Hover color for icon */
+}
+
+/* ingredientPage */
+.areaIngredient {
+  cursor: pointer;
+  transition: 0.3s all ease-in; /* Transition effect */
+}
+
+.areaIngredient:hover {
+  background-color: rgb(255, 255, 255, 0.3); /* Semi-transparent background on hover */
+}
+
+/* formPage */
+
+.formPosition input {
+  font-size: 20px; /* Input font size */
+  background-color: rgb(102 71 151); /* Input background color */
+}
+
+.formPosition ::placeholder {
+  color: rgb(244, 255, 240) !important; /* Placeholder color */
+}
+
+.formPosition input:focus {
+  background-color: rgb(102 71 151) !important; /* Focus state background color */
+}
+
+header h1 {
+  position: relative; /* Relative positioning for header */
+}
+
+header h1::after {
+  content: "";
+  position: absolute;
+  background-color: #d50baa; /* Underline color */
+  height: 3px;
+  bottom: 12px;
+  left: 25%;
+  width: 50%;
+}
+
+.alertName,
+.alertEmail,
+.alertPhone,
+.alertAge,
+.alertPassword,
+.alertRepassword,
+.alertSuccess {
+  display: none; /* Hide alerts by default */
+}
+
+/* Aside */
+ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  line-height: 1.7;
+  padding-left: 10px;
+  display: block;
+  margin-bottom: 10px;
+  transition: 0.3s all ease; /* Transition effect */
+  font-weight: bold;
+  cursor: pointer;
+}
+
+ul li a:hover {
+  background-color: rgba(204, 204, 204, 0.2); /* Hover background color */
+  padding-left: 15px; /* Adjust padding on hover */
+}
+
+.aside {
+  width: 250px; /* Width of the aside */
+}
+
+.subAside {
+  margin-left: 250px; /* Positioning for subAside */
+  width: 60px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: white; /* Background color */
+}
+
+i {
+  cursor: pointer; /* Cursor style */
+}
+
+#openAside {
+  display: none; /* Hide openAside by default */
+}
+
+.searchLink,
+.searchCategories,
+.searchArea,
+.SearchIngredients,
+.ContactUs {
+  position: relative; /* Relative positioning for search items */
+}
+
+@media (max-width:768px) {
+  aside {
+    display: none; /* Hide aside on smaller screens */
+  }
+}
